@@ -1,6 +1,6 @@
 import { Container, Typography, Paper, Box, Rating } from '@mui/material';
 
-export default function Template({ rating = 4 }) {
+export default function Template({ rating1 = 4, rating2 = 2.5 }) {
     return (
         <Container maxWidth="md">
             <Box
@@ -13,12 +13,12 @@ export default function Template({ rating = 4 }) {
                 }}
             >
                 <Typography variant="h5" sx={{ fontWeight: 'bold', fontSize: '1.6rem' }}>
-                    Meine Produkte
+                    Articles worth reading
                 </Typography>
             </Box>
             <Paper elevation={3} sx={{ padding: 3, marginTop: 4 }}>
                 <Typography variant="h5" gutterBottom>
-                    Willkommen auf der Seite
+                    Banana for scale!
                 </Typography>
 
                 <Box sx={{ mt: 3, p: 2, bgcolor: '#f5f5f5', borderRadius: 2 }}>
@@ -46,11 +46,27 @@ export default function Template({ rating = 4 }) {
                         ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum.
                         Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque.
                     </Typography>
+
+                    <Box sx={{ clear: 'both', mt: 2 }}>
+                        <Rating
+                            value={rating1}
+                            precision={0.5}
+                            readOnly
+                            sx={{
+                                '& .MuiRating-iconFilled': {
+                                    color: '#FFD700'
+                                },
+                                '& .MuiRating-iconEmpty': {
+                                    color: '#FFD700'
+                                }
+                            }}
+                        />
+                    </Box>
                 </Box>
             </Paper>
             <Paper elevation={3} sx={{ padding: 3, marginTop: 4 }}>
                 <Typography variant="h5" gutterBottom>
-                    Willkommen auf der Seite
+                    Biggest Banana ever!
                 </Typography>
 
                 <Box sx={{ mt: 3, p: 2, bgcolor: '#f5f5f5', borderRadius: 2 }}>
@@ -83,7 +99,7 @@ export default function Template({ rating = 4 }) {
 
                     <Box sx={{ clear: 'both', mt: 2 }}>
                         <Rating
-                            value={rating}
+                            value={rating2}
                             precision={0.5}
                             readOnly
                             sx={{
