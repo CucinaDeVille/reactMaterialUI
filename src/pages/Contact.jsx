@@ -1,6 +1,11 @@
-import { Container, Typography, Paper, Box } from "@mui/material";
+import { Container, Typography, Paper, Box, TextField, Button } from "@mui/material";
+import { useState } from "react";
 
 export default function Contact() {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [mail, setMail] = useState('');
+
     return (
         <Container maxWidth="md">
             <Paper elevation={3} sx={{ padding: 3, marginTop: 4 }}>
@@ -34,6 +39,57 @@ export default function Contact() {
                         ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum.
                         Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque.
                     </Typography>
+
+                    <Box
+                        component="form"
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            alert(
+                                `Contact message has been sent\n\nVorname: ${firstName}\nNachname: ${lastName}\nMail: ${mail}`
+                            );
+                        }}
+                        sx={{
+                            clear: 'both',
+                            mt: 3,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 2
+                        }}
+                    >
+                        <TextField
+                            label="Vorname"
+                            value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)}
+                            fullWidth
+                        />
+                        <Typography variant="caption" sx={{ display: 'block' }}>
+                            Vorname: {firstName}
+                        </Typography>
+
+                        <TextField
+                            label="Nachname"
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)}
+                            fullWidth
+                        />
+                        <Typography variant="caption" sx={{ display: 'block' }}>
+                            Nachname: {lastName}
+                        </Typography>
+
+                        <TextField
+                            label="Mail"
+                            value={mail}
+                            onChange={(e) => setMail(e.target.value)}
+                            fullWidth
+                        />
+                        <Typography variant="caption" sx={{ display: 'block' }}>
+                            Mail: {mail}
+                        </Typography>
+
+                        <Button type="submit" variant="contained">
+                            Submit
+                        </Button>
+                    </Box>
                 </Box>
             </Paper>
         </Container>
