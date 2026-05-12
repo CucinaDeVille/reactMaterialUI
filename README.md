@@ -6,7 +6,7 @@ Create a new project with `npm create vite@latest <project-name> -- --template r
 ## Dependencies
 This project requires *react-router-dom*, which can be installed via `npm install react-router-dom@6`. Run this command inside the project directory (where the *package.json* file is located).
 
-Furthermore, to use Material UI the listed tools need to be installed:
+Furthermore, to use Material UI the tools listed below need to be installed:
 - npm install @mui/material @emotion/react @emotion/styled
 - npm install @fontsource/roboto
 - npm install @mui/icons-material
@@ -15,7 +15,7 @@ A more indepth guide can be found [here](https://mui.com/material-ui/getting-sta
 
 As explained above, these npm-commands also need to be executed from within the project directory on your computer.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
 Currently, two official plugins are available:
 
