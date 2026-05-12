@@ -1,6 +1,6 @@
 import { Container, Typography, Paper, Box, Rating } from '@mui/material';
 
-export default function Template({ rating1 = 4, rating2 = 2.5 }) {
+export default function Home({ rating1 = 4, rating2 = 2.5 }) {
     return (
         <Container maxWidth="md">
             <Box
@@ -32,7 +32,8 @@ export default function Template({ rating1 = 4, rating2 = 2.5 }) {
                             borderRadius: 5,
                             objectFit: 'cover',
                             float: 'left',
-                            marginRight: 3
+                            marginRight: 3,
+                            marginBottom: 1
                         }}
                     />
 
@@ -72,17 +73,16 @@ export default function Template({ rating1 = 4, rating2 = 2.5 }) {
                 <Box sx={{ mt: 3, p: 2, bgcolor: '#f5f5f5', borderRadius: 2 }}>
                     <Box
                         component="img"
-                        src="https://imgur.com/n2fP4fH.jpg"
+                        src="https://i.imgur.com/n2fP4fH.jpg"
                         alt="Produktbild"
                         sx={{
                             width: '50%',
-                            maxWidth: '50%',
                             height: 'auto',
-                            borderRadius: 2,
+                            borderRadius: 5,
                             objectFit: 'cover',
                             float: 'left',
-                            mr: 2,
-                            mb: 1
+                            marginRight: 3,
+                            marginBottom: 1
                         }}
                     />
 

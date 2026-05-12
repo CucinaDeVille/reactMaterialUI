@@ -34,7 +34,7 @@ export default function Layout() {
                     </IconButton>
 
                     <Typography variant="h6" sx={{ ml: 2 }}>
-                        My App
+                        Monday Mail
                     </Typography>
                 </Toolbar>
             </AppBar>
